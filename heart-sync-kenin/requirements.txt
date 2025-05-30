@@ -1,0 +1,37 @@
+npm install @supabase/supabase-js
+npm install --save-dev vite @vitejs/plugin-vue
+
+Database utilizing supabase
+FileStorage utilizing cloudinary
+
+====================================================================== Project File Structure ======================================================================
+
+src/
+└── features/
+    └── auth/
+        ├── data/
+        │   ├── models/
+        │   │   └── AuthResponseModel.ts         <-- Model respons dari Supabase
+        │   ├── source/
+        │   │   └── AuthRemoteSource.ts         <-- Interaksi langsung ke Supabase
+        │   └── repository/
+        │       └── AuthRepository.ts           <-- Implementasi dari IAuthRepository
+        │
+        ├── domain/
+        │   ├── entities/
+        │   │   └── UserEntity.ts               <-- Representasi user
+        │   ├── repository/
+        │   │   └── IAuthRepository.ts          <-- Interface contract
+        │   └── use-cases/
+        │       ├── RegisterUserUseCase.ts      <-- Use case register
+        │       └── LoginUserUseCase.ts         <-- Use case login
+        │
+        ├── presentation/
+        │   ├── stores/
+        │   │   └── authStore.ts                <-- Pinia store auth
+        │   └── pages/
+        │       ├── LoginPage.vue               <-- Halaman login
+        │       └── RegisterPage.vue            <-- Halaman register
+
+
+====================================================================== Project File Structure ======================================================================

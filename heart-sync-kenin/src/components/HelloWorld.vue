@@ -1,3 +1,4 @@
+<!-- HelloWorld -->
 <script setup lang="ts">
 defineProps<{
   msg: string
