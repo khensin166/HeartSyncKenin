@@ -2,7 +2,7 @@
 <template>
   <div class="min-h-screen flex items-center justify-center bg-gray-100">
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Masuk</h2>
+      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Login</h2>
       <form @submit.prevent="handleLogin">
         <div class="mb-4">
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
