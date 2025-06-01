@@ -1,20 +1,13 @@
-// module.exports = {
-//   purge: [],
-//   darkMode: false, // or 'media' or 'class'
-//   theme: {
-//     extend: {},
-//   },
-//   variants: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
-
 // tailwind.config.js
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './node_modules/flowbite/**/*.js'],
+  safelist: ['bg-soft-pink'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'soft-pink': '#ffdcdc',
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 }

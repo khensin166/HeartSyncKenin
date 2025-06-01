@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../features/auth/presentation/views/LoginPage.vue'
 import RegisterView from '../features/auth/presentation/views/RegisterPage.vue'
+import DashboardView from '../features/auth/presentation/views/DashboardView.vue'
 import { useAuthStore } from '../features/auth/presentation/stores/authStore'
 
 const router = createRouter({
@@ -13,6 +14,11 @@ const router = createRouter({
       component: LoginView,
     },
     {
+      path: '/login',
+      name: 'logins',
+      component: LoginView,
+    },
+    {
       path: '/register',
       name: 'register',
       component: RegisterView,
@@ -20,14 +26,14 @@ const router = createRouter({
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: () => import('../features/auth/presentation/views/DashboardView.vue'),
+      component: DashboardView,
       meta: { requiresAuth: true },
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue'),
-    },
+    // {
+    //   path: '/about',
+    //   name: 'about',
+    //   component: () => import('../views/AboutView.vue'),
+    // },
   ],
 })
 

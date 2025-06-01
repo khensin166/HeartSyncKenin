@@ -1,6 +1,8 @@
 // main.ts
+import 'flowbite'
 import './assets/main.css'
-import './assets/styles.css'
+// import './assets/styles.css'
+// import './assets/output.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
