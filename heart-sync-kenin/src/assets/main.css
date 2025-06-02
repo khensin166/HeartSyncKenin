@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+@theme {
+  --font-primary: 'Kaushan Script', cursive;
+  --color-primary: #70bac9;
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  /* ... */
+}
+

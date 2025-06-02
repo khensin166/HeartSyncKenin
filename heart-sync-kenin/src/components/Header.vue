@@ -1,16 +1,18 @@
 <template>
-  <nav class="bg-soft-pink border-gray-200 dark:bg-gray-900">
+  <nav class="bg-primary border-gray-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <RouterLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="@/assets/logo.svg" class="h-15" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+        <span
+          class="font-primary self-center text-2xl font-semibold whitespace-nowrap text-gray-900 dark:text-white"
+        >
           KaiNest
         </span>
       </RouterLink>
       <button
         data-collapse-toggle="navbar-default"
         type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-900 rounded-lg md:hidden hover:bg-tosca/50 focus:outline-none focus:ring-2 focus:ring-soft-pink/50 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         aria-controls="navbar-default"
         aria-expanded="false"
       >
@@ -33,12 +35,12 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border-gray-100 rounded-lg bg-tosca/50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent bg-primary md:ng-primary dark:border-gray-700"
         >
           <li>
             <RouterLink
               to="/"
-              class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+              class="block py-2 px-3 text-gray-900 rounded bg-tosca/70 md:bg-transparent md:text-gray-900 md:p-0 dark:text-white md:dark:text-gray-100"
             >
               Home
             </RouterLink>
@@ -46,7 +48,7 @@
           <li>
             <RouterLink
               to="/about"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-tosca/70 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-gray-300"
             >
               About
             </RouterLink>
@@ -54,7 +56,7 @@
           <li v-if="isAuthenticated">
             <RouterLink
               to="/dashboard"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-tosca/70 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-gray-300"
             >
               Dashboard
             </RouterLink>
@@ -62,7 +64,7 @@
           <li v-if="!isAuthenticated">
             <RouterLink
               to="/register"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-tosca/70 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-gray-300"
             >
               Register
             </RouterLink>
@@ -70,7 +72,7 @@
           <li v-if="!isAuthenticated">
             <RouterLink
               to="/"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-tosca/70 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-gray-300"
             >
               Login
             </RouterLink>
@@ -78,7 +80,7 @@
           <li v-if="isAuthenticated">
             <a
               @click="authStore.logout()"
-              class="block py-2 px-3 text-gray-900 cursor-pointer hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+              class="block py-2 px-3 text-gray-900 cursor-pointer rounded hover:bg-tosca/70 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-gray-300"
             >
               Logout
             </a>

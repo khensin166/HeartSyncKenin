@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../features/auth/presentation/views/LoginPage.vue'
 import RegisterView from '../features/auth/presentation/views/RegisterPage.vue'
 import DashboardView from '../features/auth/presentation/views/DashboardView.vue'
+import GetStartedView from '../features/auth/presentation/views/GetStartedView.vue'
 import { useAuthStore } from '../features/auth/presentation/stores/authStore'
 
 const router = createRouter({
@@ -10,12 +11,12 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: LoginView,
+      name: 'getStarted',
+      component: GetStartedView,
     },
     {
       path: '/login',
-      name: 'logins',
+      name: 'login',
       component: LoginView,
     },
     {

@@ -1,5 +1,6 @@
 // main.ts
 import 'flowbite'
+import 'aos/dist/aos.css'
 import './assets/main.css'
 // import './assets/styles.css'
 // import './assets/output.css'
