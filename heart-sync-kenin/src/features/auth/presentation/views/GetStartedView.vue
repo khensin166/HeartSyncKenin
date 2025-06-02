@@ -13,7 +13,7 @@
 
       <!-- Button muncul dari bawah -->
       <transition name="fade-up">
-        <button v-if="showButton" @click="handleStart" class="focus:outline-none mt-4">
+        <button v-if="showButton" @click="handleStart" class="focus:outline-none mt-4 btn-start">
           <img src="@/assets/started-button.png" alt="Start" class="w-48 md:w-56" />
         </button>
       </transition>
@@ -69,5 +69,14 @@ onMounted(() => {
 .fade-up-enter-to {
   opacity: 1;
   transform: translateY(0);
+}
+.btn-start {
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block; /* pastikan bisa di-scale */
+}
+
+.btn-start:hover {
+  transform: scale(1.2); /* 200% */
 }
 </style>
